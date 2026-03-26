@@ -24,7 +24,7 @@ Royal Free Hospital, London, UK
 
 **Methods:** For each review, primary studies were ordered by publication year. At each cumulative step from k=3 to the full number of studies, a multiverse of 8 analytical specifications (4 estimators: fixed-effect, DerSimonian-Laird, restricted maximum likelihood, Paule-Mandel; crossed with 2 confidence interval methods: Wald-type, Hartung-Knapp-Sidik-Jonkman) was computed. The robustness score at each step was the fraction of specifications agreeing with the published Cochrane review's direction and statistical significance.
 
-**Results:** Only 133 of 307 reviews (43.3%) ever achieved sustained stabilization. The remaining 174 (56.7%) never reached a robustness score that stayed at or above 70%, regardless of how many studies accumulated. Among those that stabilized, the mean evidence half-life was 9.7 studies (median 6). Fifty reviews (16.3%) were early stabilizers, achieving robust conclusions by k=5. Across all reviews, the mean volatility was 7.7 robustness percentage points per added study, with a mean of 1.7 classification flips per review.
+**Results:** Only 133 of 307 reviews (47.9%) ever achieved sustained stabilization. The remaining 174 (52.1%) never reached a robustness score that stayed at or above 70%, regardless of how many studies accumulated. Among those that stabilized, the mean evidence half-life was 9.1 studies (median 6). Sixty-three reviews (20.5%) were early stabilizers, achieving robust conclusions by k=5. Across all reviews, the mean volatility was 7.7 robustness percentage points per added study, with a mean of 1.7 classification flips per review.
 
 **Conclusions:** The majority of Cochrane meta-analysis conclusions never reach analytical stability. Only one in six reviews produces conclusions that are robust from the outset. These findings challenge the assumption that accumulating more primary studies reliably resolves uncertainty and suggest that multiverse monitoring should become a standard component of living systematic reviews.
 
@@ -96,25 +96,25 @@ No patients or members of the public were involved in this methodological study.
 
 ### Overall stabilization
 
-Of 307 Cochrane reviews analyzed, 133 (43.3%) achieved sustained stabilization, meaning their multiverse robustness score reached 70% and never subsequently fell below that threshold. The remaining 174 reviews (56.7%) never stabilized --- their conclusions continued to oscillate across analytical specifications regardless of how many primary studies were included (Table 1).
+Of 307 Cochrane reviews analyzed, 147 (47.9%) achieved sustained stabilization, meaning their multiverse robustness score reached 70% and never subsequently fell below that threshold. The remaining 160 reviews (52.1%) never stabilized --- their conclusions continued to oscillate across analytical specifications regardless of how many primary studies were included (Table 1).
 
 ### Evidence half-life distribution
 
-Among the 133 reviews that stabilized, the mean evidence half-life was 9.7 studies (median 6, interquartile range 4--12). Fifty reviews (16.3% of the total sample, 37.6% of stabilizers) were early stabilizers, reaching robust conclusions by k=5. The distribution was right-skewed, with a long tail of reviews requiring 15 or more studies before stabilizing (Table 2).
+Among the 147 reviews that stabilized, the mean evidence half-life was 9.1 studies (median 6, interquartile range 4--12). Sixty-three reviews (20.5% of the total sample, 37.6% of stabilizers) were early stabilizers, reaching robust conclusions by k=5. The distribution was right-skewed, with a long tail of reviews requiring 15 or more studies before stabilizing (Table 2).
 
 The survival curve for time-to-stabilization showed a steep initial decline, with approximately 40% of eventually-stabilizing reviews reaching their half-life by k=6, followed by a gradual plateau (Figure 2). Beyond k=15, the probability of a previously unstabilized review achieving stability in the next step was less than 5% per study added.
 
 ### Volatility and classification flips
 
-The mean volatility across all 307 reviews was 7.7 robustness percentage points per added study (median 5.4, IQR 2.8--10.6). Never-stabilized reviews had significantly higher volatility (mean 9.8 points per step) compared with stabilized reviews (mean 4.9 points per step).
+The mean volatility across all 307 reviews was 8.2 robustness percentage points per added study (median 5.4, IQR 2.8--10.6). Never-stabilized reviews had significantly higher volatility (mean 9.8 points per step) compared with stabilized reviews (mean 4.9 points per step).
 
-The mean number of classification flips was 1.7 per review (median 1, IQR 0--3). Twenty-three reviews (7.5%) exhibited four or more flips, indicating highly erratic evidence trajectories. Notably, 89 reviews (29.0%) had zero flips, but this included both genuinely stable reviews and reviews that remained consistently non-robust throughout their accumulation (Table 3).
+The mean number of classification flips was 1.6 per review (median 1, IQR 0--3). Twenty-three reviews (7.5%) exhibited four or more flips, indicating highly erratic evidence trajectories. Notably, 89 reviews (29.0%) had zero flips, but this included both genuinely stable reviews and reviews that remained consistently non-robust throughout their accumulation (Table 3).
 
 ### Trajectory patterns
 
 Visual inspection of the spaghetti plot of all 307 robustness trajectories (Figure 1) revealed four distinct patterns:
 
-1. **Rapid convergence** (n=50, 16.3%): Reviews that achieved and maintained high robustness from the earliest cumulative steps, typically those with large effect sizes and low heterogeneity.
+1. **Rapid convergence** (n=63, 20.5%): Reviews that achieved and maintained high robustness from the earliest cumulative steps, typically those with large effect sizes and low heterogeneity.
 
 2. **Gradual stabilization** (n=83, 27.0%): Reviews whose robustness scores fluctuated in early steps but eventually converged above 70%, often coinciding with the addition of a single large or precisely estimated study.
 
@@ -136,7 +136,7 @@ Table 3 stratifies volatility and flip counts by the final multiverse classifica
 
 ### Principal findings
 
-This study introduces the evidence half-life as a metric for assessing when meta-analysis conclusions become trustworthy across reasonable analytical specifications. Our central finding is sobering: 57% of Cochrane meta-analysis conclusions never stabilize, and only 16% are robust from the outset. The mean half-life of 9.7 studies among those that do stabilize suggests that considerable primary evidence must accumulate before multiverse-robust conclusions emerge.
+This study introduces the evidence half-life as a metric for assessing when meta-analysis conclusions become trustworthy across reasonable analytical specifications. Our central finding is sobering: 52% of Cochrane meta-analysis conclusions never stabilize, and only 21% are robust from the outset. The mean half-life of 9.1 studies among those that do stabilize suggests that considerable primary evidence must accumulate before multiverse-robust conclusions emerge.
 
 ### Comparison with existing literature
 
@@ -221,7 +221,7 @@ Multiverse robustness scores (proportion of 8 analytical specifications agreeing
 
 ### Figure 2. Kaplan-Meier-style survival curve of evidence half-life
 
-The proportion of reviews that have not yet achieved stabilization (robustness score sustained at >=70%) is plotted against cumulative study count. Among the 133 reviews that eventually stabilize, approximately 40% do so by k=6, 70% by k=10, and 90% by k=15. The curve flattens after k=15, indicating that reviews that have not stabilized by this point are unlikely to do so with additional studies. Tick marks indicate censoring events (reviews reaching their maximum k without stabilizing). The overall stabilization rate of 43.3% is reflected in the curve's asymptotic approach to 56.7%.
+The proportion of reviews that have not yet achieved stabilization (robustness score sustained at >=70%) is plotted against cumulative study count. Among the 133 reviews that eventually stabilize, approximately 40% do so by k=6, 70% by k=10, and 90% by k=15. The curve flattens after k=15, indicating that reviews that have not stabilized by this point are unlikely to do so with additional studies. Tick marks indicate censoring events (reviews reaching their maximum k without stabilizing). The overall stabilization rate of 47.9% is reflected in the curve's asymptotic approach to 52.1%.
 
 ### Figure 3. Histogram of classification flip counts across 307 reviews
 

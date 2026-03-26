@@ -1,13 +1,13 @@
 {
   "n_reviews": 307,
-  "n_stabilizes": 133,
-  "pct_stabilizes": 43.3,
-  "n_never_stabilizes": 174,
-  "pct_never_stabilizes": 56.7,
-  "n_early_stabilizer": 50,
-  "half_life_k_mean": 9.7,
+  "n_stabilizes": 147,
+  "pct_stabilizes": 47.9,
+  "n_never_stabilizes": 160,
+  "pct_never_stabilizes": 52.1,
+  "n_early_stabilizer": 63,
+  "half_life_k_mean": 9.1,
   "half_life_k_median": 6,
-  "mean_volatility": 7.7,
-  "mean_flips": 1.7,
-  "elapsed_seconds": 35.3
+  "mean_volatility": 8.2,
+  "mean_flips": 1.6,
+  "elapsed_seconds": 182.3
 }
