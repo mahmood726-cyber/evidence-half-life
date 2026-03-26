@@ -54,7 +54,8 @@ def pool_reml(yi, sei, max_iter=50, tol=1e-8):
         wi = 1.0 / (sei**2 + tau2)
         sw = np.sum(wi)
         theta = float(np.sum(wi * yi) / sw)
-        num = float(np.sum(wi**2 * ((yi - theta)**2 - sei**2)))
+        # REML score: U = -0.5*sum(w) + 0.5*sum(w²*(yi-θ)²)
+        num = float(np.sum(wi**2 * (yi - theta)**2) - sw)
         den = float(np.sum(wi**2))
         new_tau2 = max(0, tau2 + num / den) if den > 0 else tau2
         if abs(new_tau2 - tau2) < tol:
@@ -84,7 +85,9 @@ def pool_pm(yi, sei, max_iter=50, tol=1e-8):
         sw = np.sum(wi)
         theta = float(np.sum(wi * yi) / sw)
         Qs = float(np.sum(wi * (yi - theta)**2))
-        new_tau2 = max(0, tau2 + (Qs - (k-1)) / sw)
+        sw2 = float(np.sum(wi**2))
+        C_pm = sw - sw2 / sw if sw > 0 else 1
+        new_tau2 = max(0, tau2 + (Qs - (k-1)) / C_pm)
         if abs(new_tau2 - tau2) < tol:
             tau2 = new_tau2
             break
