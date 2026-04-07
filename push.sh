@@ -10,6 +10,6 @@ git push origin master 2>/dev/null || git push origin main 2>/dev/null
 
 echo ""
 echo "Pushed to GitHub. View at:"
-echo "  https://github.com/mahmood726-cyber/evidencehalflife"
-echo "  https://mahmood726-cyber.github.io/evidencehalflife/"
-echo "  https://mahmood726-cyber.github.io/evidencehalflife/e156-submission/"
+echo "  https://github.com/mahmood726-cyber/evidence-half-life"
+echo "  https://mahmood726-cyber.github.io/evidence-half-life/"
+echo "  https://mahmood726-cyber.github.io/evidence-half-life/e156-submission/"
