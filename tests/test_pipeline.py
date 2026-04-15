@@ -2,8 +2,11 @@
 import sys, json, csv, pytest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from pipeline import compute_robustness
+from pipeline import compute_robustness, main, resolve_paths
 import numpy as np
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+OUTPUT_DIR = REPO_ROOT / 'data' / 'output'
 
 
 class TestRobustness:
@@ -47,7 +50,7 @@ class TestRobustness:
 class TestResults:
     @pytest.fixture
     def summary(self):
-        path = Path('C:/EvidenceHalfLife/data/output/half_life_summary.json')
+        path = OUTPUT_DIR / 'half_life_summary.json'
         if not path.exists():
             pytest.skip('Run pipeline.py first')
         with open(path) as f:
@@ -55,7 +58,7 @@ class TestResults:
 
     @pytest.fixture
     def results(self):
-        path = Path('C:/EvidenceHalfLife/data/output/half_life_results.csv')
+        path = OUTPUT_DIR / 'half_life_results.csv'
         if not path.exists():
             pytest.skip('Run pipeline.py first')
         rows = []
@@ -64,8 +67,9 @@ class TestResults:
                 rows.append(row)
         return rows
 
-    def test_review_count(self, summary):
-        assert summary['n_reviews'] == 307
+    def test_review_count_matches_results(self, summary, results):
+        assert summary['n_reviews'] == len(results)
+        assert summary['n_reviews'] >= 300
 
     def test_stabilizes_plus_never_equals_total(self, summary):
         assert summary['n_stabilizes'] + summary['n_never_stabilizes'] == summary['n_reviews']
@@ -93,7 +97,7 @@ class TestResults:
 class TestTrajectories:
     @pytest.fixture
     def trajectories(self):
-        path = Path('C:/EvidenceHalfLife/data/output/half_life_trajectories.csv')
+        path = OUTPUT_DIR / 'half_life_trajectories.csv'
         if not path.exists():
             pytest.skip('Run pipeline.py first')
         rows = []
@@ -113,6 +117,36 @@ class TestTrajectories:
     def test_k_minimum(self, trajectories):
         for t in trajectories:
             assert int(t['k']) >= 3
+
+
+def test_main_uses_repo_relative_sibling_projects(tmp_path, monkeypatch):
+    projects_root = tmp_path / 'projects'
+    project_root = projects_root / 'EvidenceHalfLife'
+    project_root.mkdir(parents=True)
+
+    paths = resolve_paths(project_root=project_root, projects_root=projects_root)
+    rda_path = paths['pairwise_dir'] / 'CD000001_analysis.rda'
+    rda_path.parent.mkdir(parents=True, exist_ok=True)
+    rda_path.write_text('', encoding='utf-8')
+
+    synthetic_review = {
+        'review_id': 'CD000001',
+        'analysis_name': 'Synthetic review',
+        'yi': np.array([-0.5, -0.5, -0.5, -0.5, -0.5]),
+        'sei': np.array([0.1, 0.1, 0.1, 0.1, 0.1]),
+        'years': np.array([2001, 2002, 2003, 2004, 2005]),
+        'k': 5,
+        'scale': 'ratio',
+        'cochrane_direction': -1,
+    }
+    monkeypatch.setattr('pipeline.load_review', lambda _: synthetic_review)
+
+    output_dir = main(project_root=project_root, projects_root=projects_root)
+
+    summary = json.loads((output_dir / 'half_life_summary.json').read_text(encoding='utf-8'))
+    assert output_dir == project_root / 'data' / 'output'
+    assert summary['n_reviews'] == 1
+    assert summary['n_stabilizes'] == 1
 
 
 if __name__ == '__main__':

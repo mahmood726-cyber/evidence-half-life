@@ -18,14 +18,15 @@ Output:
 import csv
 import json
 import math
+import os
 import time
 import numpy as np
 import pyreadr
 from pathlib import Path
 from scipy import stats as sp_stats
 
-PAIRWISE_DIR = Path(r'C:\Models\Pairwise70\data')
-OUTPUT_DIR = Path(r'C:\EvidenceHalfLife\data\output')
+PROJECT_ROOT = Path(__file__).resolve().parent
+DEFAULT_PROJECTS_ROOT = PROJECT_ROOT.parent
 
 
 # ══════════════════════════════════════════
@@ -184,16 +185,16 @@ def load_review(rda_path):
 
     import pandas as pd
     gdf = pd.DataFrame(groups)
-    binary = gdf[gdf['binary']]
+    binary = gdf[gdf['binary']].copy()
     best = binary.loc[binary['k'].idxmax()] if len(binary) > 0 else gdf.loc[gdf['k'].idxmax()]
-    primary = df[(df['Analysis.group'] == best['grp']) & (df['Analysis.number'] == best['num'])]
+    primary = df[(df['Analysis.group'] == best['grp']) & (df['Analysis.number'] == best['num'])].copy()
 
     # Determine scale
     has_binary = (primary['Experimental.cases'].notna() & (primary['Experimental.cases'] > 0)).any()
     if has_binary:
         scale = 'ratio'
     else:
-        means = primary['Mean'].dropna()
+        means = primary['Mean'].copy().dropna()
         scale = 'ratio' if len(means) > 0 and (means > 0).all() else 'difference'
 
     # Compute yi/sei
@@ -201,23 +202,23 @@ def load_review(rda_path):
         valid = (primary['Mean'].notna() & (primary['Mean'] > 0) &
                  primary['CI.start'].notna() & (primary['CI.start'] > 0) &
                  primary['CI.end'].notna() & (primary['CI.end'] > 0))
-        sub = primary[valid].copy()
+        sub = primary[valid].copy().copy()
         if len(sub) < 3:
             return None
         yi = np.log(sub['Mean'].values.astype(float))
         sei = (np.log(sub['CI.end'].values.astype(float)) - np.log(sub['CI.start'].values.astype(float))) / (2 * 1.96)
     else:
-        valid = primary['Mean'].notna() & primary['CI.start'].notna() & primary['CI.end'].notna()
-        sub = primary[valid].copy()
+        valid = primary['Mean'].notna() & primary['CI.start'].notna() & primary['CI.end'].copy().notna()
+        sub = primary[valid].copy().copy()
         if len(sub) < 3:
             return None
-        yi = sub['Mean'].values.astype(float)
+        yi = sub['Mean'].copy().values.astype(float)
         sei = (sub['CI.end'].values.astype(float) - sub['CI.start'].values.astype(float)) / (2 * 1.96)
 
     # Filter valid SE
     ok = (sei > 0) & np.isfinite(yi) & np.isfinite(sei)
-    yi = yi[ok]
-    sei = sei[ok]
+    yi = yi[ok].copy()
+    sei = sei[ok].copy()
     if 'Study.year' in sub.columns:
         raw_years = sub.loc[sub.index[ok], 'Study.year'].values
         years = np.zeros(len(yi))
@@ -234,9 +235,9 @@ def load_review(rda_path):
 
     # Sort by year
     order = np.argsort(years)
-    yi = yi[order]
-    sei = sei[order]
-    years = years[order]
+    yi = yi[order].copy()
+    sei = sei[order].copy()
+    years = years[order].copy()
 
     # Cochrane direction (from full FE)
     wi = 1.0 / sei**2
@@ -260,9 +261,9 @@ def load_review(rda_path):
 
 def compute_trajectory(review):
     """Compute cumulative robustness trajectory for one review."""
-    yi = review['yi']
-    sei = review['sei']
-    years = review['years']
+    yi = review['yi'].copy()
+    sei = review['sei'].copy()
+    years = review['years'].copy()
     direction = review['cochrane_direction']
     k = review['k']
 
@@ -297,14 +298,41 @@ def compute_half_life(trajectory, threshold=70.0):
     return None, None  # Never stabilizes
 
 
-def main():
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+def resolve_paths(project_root=None, projects_root=None):
+    project_root = Path(project_root).resolve() if project_root else PROJECT_ROOT
+    projects_root = Path(projects_root).resolve() if projects_root else project_root.parent
+    pairwise_candidates = []
+    env_pairwise = os.getenv('PAIRWISE70_DATA_DIR')
+    if env_pairwise:
+        pairwise_candidates.append(Path(env_pairwise).expanduser())
+    pairwise_candidates.extend([
+        projects_root / 'Models' / 'Pairwise70' / 'data',
+        projects_root / 'Projects' / 'Pairwise70' / 'data',
+    ])
+    pairwise_dir = next((path.resolve() for path in pairwise_candidates if path.exists()), pairwise_candidates[0].resolve())
+    return {
+        'pairwise_dir': pairwise_dir,
+        'output_dir': project_root / 'data' / 'output',
+    }
+
+
+def main(project_root=None, projects_root=None):
+    paths = resolve_paths(project_root=project_root, projects_root=projects_root)
+    pairwise_dir = paths['pairwise_dir']
+    output_dir = paths['output_dir']
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     print("Evidence Half-Life Pipeline")
     print("=" * 35)
 
     t0 = time.time()
-    rda_files = sorted(PAIRWISE_DIR.glob('*.rda'))
+    if not pairwise_dir.exists():
+        print(f"ERROR: Pairwise70 data directory not found: {pairwise_dir}")
+        return None
+    rda_files = sorted(pairwise_dir.glob('*.rda'))
+    if not rda_files:
+        print(f"ERROR: No RDA files found in {pairwise_dir}")
+        return None
     print(f"  Found {len(rda_files)} RDA files")
 
     results = []
@@ -328,7 +356,7 @@ def main():
             continue
 
         hl_k, hl_year = compute_half_life(traj, threshold=70.0)
-        final = traj[-1]
+        final = traj[-1].copy()
 
         # Score volatility: std of score changes between consecutive steps
         if len(traj) > 1:
@@ -389,6 +417,9 @@ def main():
     # ══════════════════════════════════════════
 
     n = len(results)
+    if n == 0:
+        print("ERROR: No analyzable reviews found; aborting export.")
+        return None
     stabilizes = [r for r in results if r['stabilizes'] == 'Yes']
     never_stab = [r for r in results if r['stabilizes'] == 'No']
     early_stab = [r for r in results if r['early_stabilizer'] == 'Yes']
@@ -419,14 +450,14 @@ def main():
 
     # Results CSV
     fields = list(results[0].keys())
-    with open(OUTPUT_DIR / 'half_life_results.csv', 'w', newline='', encoding='utf-8') as f:
+    with open(output_dir / 'half_life_results.csv', 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         writer.writerows(results)
 
     # Trajectories CSV
     traj_fields = ['review_id', 'k', 'year', 'score', 'classification']
-    with open(OUTPUT_DIR / 'half_life_trajectories.csv', 'w', newline='', encoding='utf-8') as f:
+    with open(output_dir / 'half_life_trajectories.csv', 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=traj_fields)
         writer.writeheader()
         writer.writerows(trajectories)
@@ -445,10 +476,11 @@ def main():
         'mean_flips': round(sum(n_flips_list) / n, 1),
         'elapsed_seconds': round(elapsed, 1),
     }
-    with open(OUTPUT_DIR / 'half_life_summary.json', 'w', encoding='utf-8') as f:
+    with open(output_dir / 'half_life_summary.json', 'w', encoding='utf-8') as f:
         json.dump(summary, f, indent=2)
 
-    print(f"\n  Saved to {OUTPUT_DIR}/")
+    print(f"\n  Saved to {output_dir}/")
+    return output_dir
 
 
 if __name__ == '__main__':
