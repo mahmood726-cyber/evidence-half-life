@@ -1,9 +1,15 @@
 review_id,analysis_name,k,scale,final_score,final_class,half_life_k,half_life_year,half_life_pct,volatility,n_flips,first_flip_k,year_span,stabilizes,early_stabilizer
-CD000028,Cause of cardiovascular mortality,21,ratio,100.0,Robust,10,1989.0,47.6,5.56,1,10,14.0,Yes,No
+CD000028,Cause of cardiovascular mortality,21,ratio,100.0,Robust,10,1989.0,47.6,5.56,2,10,14.0,Yes,No
 CD000143,Extubation failure,12,ratio,25.0,Unstable,,,,19.44,6,4,7.0,No,No
+CD000214,Smoking abstinence at longest follow-up,17,ratio,100.0,Robust,12,2006.0,70.6,10.71,3,12,27.0,Yes,No
 CD000219,Pain,21,ratio,100.0,Robust,11,1991.0,52.4,8.33,3,11,33.0,Yes,No
+CD000247,Persisting symptoms 1 to 7 days,6,ratio,0.0,Unstable,,,,16.67,0,,22.0,No,No
+CD000402,Endometrial hyperplasia at 1 year,16,ratio,100.0,Robust,3,1995.0,18.8,0.0,0,,10.0,Yes,Yes
 CD000478,Failure to maintain remission - all trials,13,ratio,100.0,Robust,6,2000.0,46.2,10.0,2,6,23.0,Yes,No
+CD000512,Individual components of neurodevelopmental outcome in survivors at 18 to 26 months postmenstrual age (trials adjusted for chronologic age and critical illness),15,ratio,0.0,Unstable,,,,4.17,1,,14.0,No,No
 CD000547,Individual adverse events,48,ratio,100.0,Robust,6,1994.0,12.5,0.83,1,6,13.0,Yes,No
+CD001059,Pre-eclampsia,5,ratio,0.0,Unstable,,,,0.0,0,,3826.0,No,No
+CD001125,Side effects,6,ratio,0.0,Unstable,,,,0.0,0,,2.0,No,No
 CD001155,"Alendronate vs Other active agent, Secondary",59,ratio,25.0,Unstable,,,,0.45,0,,19.0,No,No
 CD001321,Symptomatic UTI: culture-verified UTI,27,ratio,100.0,Robust,14,2013.0,51.9,14.58,9,10,16.0,Yes,No
 CD001396,Response rates,30,ratio,100.0,Robust,4,1996.0,13.3,1.39,1,4,20.0,Yes,Yes
@@ -13,16 +19,20 @@ CD001703,Non-specific low back pain and spine-related leg pain: withdrawals due 
 CD001797,Significant improvement in disability within 6 weeks,5,ratio,100.0,Robust,4,2001.0,80.0,25.0,1,4,12.0,Yes,Yes
 CD001837,Quit at longest follow-up (6 + months),49,ratio,100.0,Robust,4,1993.0,8.2,1.09,1,4,30.0,Yes,Yes
 CD001909,≥ 50% reduction in seizure frequency (intention-to-treat analysis),25,ratio,100.0,Robust,11,1993.0,44.0,9.09,4,7,21.0,Yes,No
+CD001939,Hepatic encephalopathy,18,ratio,100.0,Robust,7,1986.0,38.9,10.0,3,7,38.0,Yes,No
 CD002042,Participants exposed to blood transfusion by clinical specialties,53,ratio,100.0,Robust,4,1995.0,7.5,1.25,2,4,31.0,Yes,Yes
 CD002112,Number of children achieving 14 consecutive dry nights by the end of treatment,21,ratio,100.0,Robust,11,2013.0,52.4,8.33,4,7,21.0,Yes,No
 CD002115,Number of participants with self-reported improvement in constipation (dichotomous),5,ratio,100.0,Robust,5,2022.0,100.0,25.0,1,5,2.0,Yes,Yes
-CD002122,Adverse effects,56,ratio,0.0,Unstable,,,,8.02,7,16,20.0,No,No
+CD002118,Clinical pregnancy rate,36,ratio,100.0,Robust,27,2014.0,75.0,6.06,6,10,26.0,Yes,No
+CD002122,Adverse effects,56,ratio,0.0,Unstable,,,,10.38,9,16,20.0,No,No
 CD002203,Adverse effects of antibiotic treatment,50,ratio,25.0,Unstable,,,,0.53,0,,17.0,No,No
 CD002243,28-day all-cause mortality - sensitivity analysis based on methodological quality,180,ratio,100.0,Robust,114,2018.0,63.3,3.95,14,37,36.0,Yes,No
 CD002290,Relapse,16,ratio,100.0,Robust,9,2001.0,56.2,7.69,2,9,23.0,Yes,No
 CD002303,Reulceration,5,ratio,100.0,Robust,4,2018.0,80.0,25.0,2,4,6.0,Yes,Yes
+CD002769,Quality of life&nbsp;,8,difference,0.0,Unstable,,,,0.0,0,,0.0,No,No
 CD002971,Necrotising enterocolitis,10,ratio,100.0,Robust,8,2016.0,80.0,35.71,3,6,40.0,Yes,No
 CD003218,Proportion of participants with at least 1 adverse event,5,ratio,0.0,Unstable,,,,0.0,0,,5.0,No,No
+CD003308,Adverse effects of phototherapy,12,ratio,0.0,Unstable,,,,5.56,0,,20.0,No,No
 CD003331,All-cause mortality up to 12 months' follow-up,35,ratio,0.0,Unstable,,,,0.0,0,,23.0,No,No
 CD003357,Live birth rate per woman,7,ratio,100.0,Robust,5,2014.0,71.4,18.75,2,5,7.0,Yes,Yes
 CD003376,"Treatment versus reference, secondary",15,ratio,0.0,Unstable,,,,0.0,0,,5.0,No,No
@@ -36,8 +46,10 @@ CD003598,Graft loss,21,ratio,100.0,Robust,20,2011.0,95.2,5.56,1,20,22.0,Yes,No
 CD003743,Infection up to discharge from home support or hospital,6,ratio,100.0,Robust,4,1999.0,66.7,16.67,1,4,0.0,Yes,Yes
 CD003774,CMV disease,42,ratio,100.0,Robust,4,1992.0,9.5,1.28,1,4,13.0,Yes,Yes
 CD003962,Adverse events,6,ratio,0.0,Unstable,,,,0.0,0,,16.0,No,No
+CD004143,Breast cancer: combined continuous HT,14,ratio,75.0,Moderate,10,1998.0,71.4,11.36,3,10,20.0,Yes,No
 CD004184,Overall adverse events,7,ratio,0.0,Unstable,,,,0.0,0,,13.0,No,No
-CD004307,Smoking cessation (subgrouped by when incentives were provided),42,ratio,100.0,Robust,9,2010.0,21.4,2.56,2,9,22.0,Yes,No
+CD004307,Smoking cessation (subgrouped by when incentives were provided),42,ratio,100.0,Robust,9,2010.0,21.4,3.85,4,9,22.0,Yes,No
+CD004366,Completed intervention or control,51,ratio,0.0,Unstable,,,,0.0,0,,36.0,No,No
 CD004376,Study withdrawals at final follow-up,104,ratio,0.0,Unstable,,,,0.0,0,,26.0,No,No
 CD004406,Resolution of symptoms post-treatment (ITT analysis),6,ratio,0.0,Unstable,,,,0.0,0,,11.0,No,No
 CD004417,Antibiotic use: delayed versus immediate antibiotics,17,ratio,100.0,Robust,3,2001.0,17.6,0.89,1,,20.0,Yes,Yes
@@ -52,6 +64,7 @@ CD004953,Death,11,ratio,0.0,Unstable,,,,0.0,0,,6.0,No,No
 CD005133,Adverse events,39,ratio,50.0,Fragile,,,,18.75,9,7,29.0,No,No
 CD005187,Death from any cause,5,ratio,100.0,Robust,3,2000.0,60.0,0.0,0,,9.0,Yes,Yes
 CD005343,Surgically-related adverse effects (G3+),31,ratio,100.0,Robust,7,2015.0,22.6,5.36,4,4,6.0,Yes,No
+CD005470,Tailored strategy vs no strategy (min),24,ratio,100.0,Robust,9,2022.0,37.5,8.33,5,5,8.0,Yes,No
 CD005495,Rate of cerebral palsy,9,ratio,0.0,Unstable,,,,0.0,0,,17.0,No,No
 CD005566,Infectious complications,28,ratio,75.0,Moderate,21,2012.0,75.0,5.0,2,21,23.0,Yes,No
 CD005595,Adverse events,32,ratio,0.0,Unstable,,,,0.0,0,,34.0,No,No
@@ -61,11 +74,15 @@ CD006124,Perioperative complications,6,ratio,0.0,Unstable,,,,0.0,0,,12.0,No,No
 CD006140,Acceptability,8,ratio,100.0,Robust,5,,62.5,15.0,3,5,0,Yes,Yes
 CD006185,Regaining independent walking ability,78,ratio,100.0,Robust,17,2007.0,21.8,1.33,2,17,22.0,Yes,No
 CD006257,Death: any cause,9,ratio,0.0,Unstable,,,,16.67,2,,4.0,No,No
+CD006268,Hypoxia,22,ratio,0.0,Unstable,,,,2.63,0,,21.0,No,No
 CD006404,Other adverse events,112,ratio,0.0,Unstable,,,,1.15,0,,22.0,No,No
+CD006448,Fatigue,8,difference,75.0,Moderate,8,2020.0,100.0,15.0,2,8,3.0,Yes,No
 CD006475,Sensitivity analysis: eczema by 2 years by definition of allergic disease,27,ratio,100.0,Robust,16,2009.0,59.3,9.38,7,16,14.0,Yes,No
 CD006515,Mechanical complications,5,ratio,0.0,Unstable,,,,0.0,0,,5.0,No,No
 CD006536,All-cause mortality,43,ratio,0.0,Unstable,,,,0.0,0,,16.0,No,No
-CD006632,Length of hospital stay (days),23,difference,100.0,Robust,6,2000.0,26.1,5.0,3,6,19.0,Yes,No
+CD006589,All-cause mortality,11,ratio,0.0,Unstable,,,,0.0,0,,21.0,No,No
+CD006632,Length of hospital stay (days),23,difference,100.0,Robust,7,2000.0,30.4,5.0,3,7,19.0,Yes,No
+CD006680,Initial technical failure rates,9,ratio,25.0,Unstable,,,,20.83,3,7,11.0,No,No
 CD006689,Maternal peripheral parasitaemia at delivery (amplification techniques),5,ratio,50.0,Fragile,,,,25.0,1,,7.0,No,No
 CD006913,"Number of patients completing program - psychotherapy vs any control, all populations",29,ratio,62.5,Fragile,,,,6.25,3,28,15.0,No,No
 CD006919,Clinical pregnancies all studies,19,ratio,100.0,Robust,16,2003.0,84.2,10.94,4,16,26.0,Yes,No
@@ -73,6 +90,7 @@ CD007024,Individual adverse events,18,ratio,0.0,Unstable,,,,0.0,0,,9.0,No,No
 CD007026,All-cause death,7,ratio,0.0,Unstable,,,,0.0,0,,2.0,No,No
 CD007079,Preterm birth < 37 weeks' gestation,10,ratio,37.5,Unstable,,,,5.36,0,,15.0,No,No
 CD007130,Completers,26,ratio,0.0,Unstable,,,,4.35,2,,116.0,No,No
+CD007131,Enrolment,31,ratio,100.0,Robust,7,2011.0,22.6,3.57,3,7,17.0,Yes,No
 CD007310,Complications,7,ratio,0.0,Unstable,,,,0.0,0,,1.0,No,No
 CD007374,Death,6,ratio,0.0,Unstable,,,,0.0,0,,8.0,No,No
 CD007491,Readmission to hospital after discharge from hospital at home or inpatient care (3 to 12 months' follow-up),8,ratio,0.0,Unstable,,,,0.0,0,,21.0,No,No
@@ -80,9 +98,12 @@ CD007569,Return to work,6,ratio,0.0,Unstable,,,,0.0,0,,7.0,No,No
 CD007572,Failure to induce clinical remission (6 to 12 weeks),10,ratio,100.0,Robust,5,2015.0,50.0,14.29,1,5,11.0,Yes,Yes
 CD007639,Adverse events,5,ratio,0.0,Unstable,,,,0.0,0,,7.0,No,No
 CD007674,Clinical recovery or improvement - best and worst case scenario,28,ratio,100.0,Robust,21,2014.0,75.0,12.0,7,11,15.0,Yes,No
+CD007689,Adverse events,9,ratio,0.0,Unstable,,,,0.0,0,,7.0,No,No
 CD007784,Major cardiovascular events,13,ratio,100.0,Robust,3,1996.0,23.1,0.0,0,,14.0,Yes,Yes
+CD007798,Thrombophlebitis,14,ratio,75.0,Moderate,14,2021.0,100.0,18.18,3,14,14.0,Yes,No
 CD007896,Withdrawals due to adverse effects,35,ratio,100.0,Robust,6,2008.0,17.1,3.12,2,6,16.0,Yes,No
 CD008063,Extent of substance use,50,difference,100.0,Robust,6,2002.0,12.0,2.66,4,4,16.0,Yes,No
+CD008112,Perceived recovery,19,ratio,25.0,Unstable,,,,12.5,2,9,14.0,No,No
 CD008145,Reception of DTP3 by 1 year of age,6,ratio,100.0,Robust,4,2011.0,66.7,20.83,3,4,7.0,Yes,Yes
 CD008165,Proportion of patients with one or more potentially inappropriate medication,13,ratio,50.0,Fragile,,,,22.5,6,7,8.0,No,No
 CD008176,Death (any cause),38,ratio,0.0,Unstable,,,,0.0,0,,27.0,No,No
@@ -92,12 +113,14 @@ CD008469,Exacerbations leading to emergency department (ED) visits: subgrouped b
 CD008493,Atrial fibrillation,10,ratio,0.0,Unstable,,,,21.43,2,4,11.0,No,No
 CD008552,Vegetable intake,5,ratio,25.0,Unstable,,,,0.0,0,,7.0,No,No
 CD008564,Total mortality,12,ratio,0.0,Unstable,,,,0.0,0,,17.0,No,No
+CD008576,Preterm birth,10,ratio,0.0,Unstable,,,,0.0,0,,14.0,No,No
 CD008628,"Function in the long term; number of people with scores of excellent, good, or satisfactory/fair",9,ratio,0.0,Unstable,,,,0.0,0,,26.0,No,No
 CD008709,Urinary retention,31,ratio,100.0,Robust,25,2016.0,80.6,14.29,7,21,10.0,Yes,No
 CD008858,Participants with adverse events,63,ratio,100.0,Robust,14,2005.0,22.2,2.08,2,14,11.0,Yes,No
 CD008879,Non-infectious complications,8,ratio,50.0,Fragile,,,,10.0,1,,14.0,No,No
 CD009022,Conversion to laparoscopic (use of more than one additional port)/open surgery (rate),9,ratio,100.0,Robust,7,2014.0,77.8,16.67,2,7,6.0,Yes,No
 CD009102,Intubation and mechanical ventilation in DR,5,ratio,50.0,Fragile,,,,18.75,1,,8.0,No,No
+CD009106,Neonatal mortality in the first 24 hours of life,6,ratio,62.5,Fragile,,,,20.83,1,,8.0,No,No
 CD009235,Mortality,31,ratio,0.0,Unstable,,,,0.0,0,,16.0,No,No
 CD009252,Subjective symptom of cure or improvement,14,ratio,0.0,Unstable,,,,0.0,0,,29.0,No,No
 CD009298,Operative delivery (Subgroup analysis: nulliparous versus multiparous),11,ratio,0.0,Unstable,,,,0.0,0,,1.0,No,No
@@ -111,9 +134,11 @@ CD009679,Complications,24,ratio,0.0,Unstable,,,,0.0,0,,11.0,No,No
 CD009730,Adverse effects,10,ratio,0.0,Unstable,,,,0.0,0,,12.0,No,No
 CD009749,Sensitivity analyses ,25,ratio,0.0,Unstable,,,,0.0,0,,10.0,No,No
 CD009788,Leaving the study early,5,ratio,50.0,Fragile,,,,12.5,1,,8.0,No,No
+CD009885,Digestive system,122,ratio,100.0,Robust,5,2002.0,4.1,0.84,1,5,21.0,Yes,Yes
 CD010001,Clinical pregnancy,25,ratio,100.0,Robust,9,2016.0,36.0,4.55,2,9,20.0,Yes,No
 CD010145,(Additional table) CR until progression of the disease,9,ratio,100.0,Robust,6,2002.0,66.7,16.67,2,6,10.0,Yes,No
 CD010189,Overall survival,6,ratio,0.0,Unstable,,,,0.0,0,,10.0,No,No
+CD010216,Serious adverse events,7,ratio,0.0,Unstable,,,,0.0,0,,3.0,No,No
 CD010216,Serious adverse events,7,ratio,0.0,Unstable,,,,0.0,0,,3.0,No,No
 CD010290,Incidence of OHSS per woman by urinary gonadotropins,7,ratio,0.0,Unstable,,,,0.0,0,,9.0,No,No
 CD010779,Passive range of motion with standardised force ,5,difference,0.0,Unstable,,,,0.0,0,,7.0,No,No
@@ -131,14 +156,14 @@ CD011626,Adverse events,11,ratio,0.0,Unstable,,,,12.5,2,,6.0,No,No
 CD011627,Number of participants with incontinence-associated dermatitis,8,ratio,12.5,Unstable,,,,0.0,0,,5.0,No,No
 CD011670,Wound infection,7,ratio,0.0,Unstable,,,,0.0,0,,3.0,No,No
 CD011671,Delayed graft function: type of donor,17,ratio,100.0,Robust,10,2001.0,58.8,7.14,3,10,35.0,Yes,No
-CD011689,Shivering,31,ratio,100.0,Robust,4,2001.0,12.9,1.34,2,4,20.0,Yes,Yes
+CD011689,Shivering,31,ratio,100.0,Robust,4,2001.0,12.9,1.34,1,4,20.0,Yes,Yes
 CD011762,Major bleeding,29,ratio,0.0,Unstable,,,,0.0,0,,17.0,No,No
-CD011778,PPD (change from baseline (mm)); 3 months,38,difference,100.0,Robust,11,2015.0,28.9,2.86,3,11,13.0,Yes,No
+CD011778,PPD (change from baseline (mm)); 3 months,38,difference,100.0,Robust,12,2015.0,31.6,5.0,4,12,13.0,Yes,No
 CD011793,Re-exploration,13,ratio,0.0,Unstable,,,,0.0,0,,18.0,No,No
-CD011866,Dropouts,28,ratio,100.0,Robust,11,2007.0,39.3,5.0,5,11,20.0,Yes,No
+CD011866,Dropouts,28,ratio,100.0,Robust,11,2007.0,39.3,6.0,5,11,20.0,Yes,No
 CD011885,"Clinically relevant response, as defined by study authors",7,ratio,12.5,Unstable,,,,3.12,0,,12.0,No,No
 CD012067,Adverse events,38,ratio,100.0,Robust,13,2017.0,34.2,9.29,12,7,8.0,Yes,No
-CD012079,Repeat surgery (0.5 to 7 years) including trials at high risk of bias,52,ratio,75.0,Moderate,35,2014.0,67.3,13.27,10,15,12.0,Yes,No
+CD012079,Repeat surgery (0.5 to 7 years) including trials at high risk of bias,52,ratio,75.0,Moderate,31,2014.0,59.6,15.31,15,16,12.0,Yes,No
 CD012170,Weight,8,difference,25.0,Unstable,,,,0.0,0,,6.0,No,No
 CD012178,Incidence of NEC,5,ratio,0.0,Unstable,,,,0.0,0,,1.0,No,No
 CD012186,Withdrawals due to AEs,105,ratio,100.0,Robust,4,1991.0,3.8,0.49,1,4,33.0,Yes,Yes
@@ -147,6 +172,7 @@ CD012445,Child emotional and behavioural adjustment – postintervention,5,diffe
 CD012503,Recurrence of ischemic stroke at the endpoint (for all studies),17,ratio,100.0,Robust,13,2022.0,76.5,10.71,4,5,10.0,Yes,No
 CD012570,Adverse events,10,ratio,0.0,Unstable,,,,0.0,0,,8.0,No,No
 CD012586,Live birth or ongoing pregnancy,42,ratio,0.0,Unstable,,,,5.13,4,,20.0,No,No
+CD012589,Radiographic lower limb alignment measured by outliers in FTCA,27,ratio,0.0,Unstable,,,,0.0,0,,11.0,No,No
 CD012623,Macular hole closure ,9,ratio,25.0,Unstable,,,,4.17,0,,9.0,No,No
 CD012635,All-cause mortality at 30 days,6,ratio,0.0,Unstable,,,,0.0,0,,8.0,No,No
 CD012693,Cycle cancellations for poor response,8,ratio,100.0,Robust,7,,87.5,27.5,3,7,6.0,Yes,No
@@ -165,6 +191,7 @@ CD013054,Sensitivity analysis: unpublished - resolution of ear discharge 1 to 2 
 CD013059,Treatment non-acceptability,5,ratio,50.0,Fragile,,,,25.0,1,,4.0,No,No
 CD013071,Treatment withdrawal due to adverse events,16,ratio,0.0,Unstable,,,,0.0,0,,15.0,No,No
 CD013105,Bladder function ,5,ratio,0.0,Unstable,,,,0.0,0,,2.0,No,No
+CD013108,One type of POP surgery vs another: anterior vaginal mesh vs anterior vaginal native tissue repair,20,ratio,25.0,Unstable,,,,11.76,4,,6.0,No,No
 CD013197,Serious adverse events (sensitivity analysis),64,ratio,0.0,Unstable,,,,0.0,0,,8.0,No,No
 CD013232,Adverse effects: neurological,121,ratio,0.0,Unstable,,,,0.0,0,,34.0,No,No
 CD013255,Sinus rhythm until hospital discharge or end of study follow-up (paroxysmal AF),9,ratio,100.0,Robust,3,1996.0,33.3,0.0,0,,15.0,Yes,Yes
@@ -185,19 +212,23 @@ CD013445,Stone-free rate,39,ratio,100.0,Robust,13,2016.0,33.3,6.25,3,13,10.0,Yes
 CD013456,Trauma-focused versus non trauma-focused interventions; outcome 3: Dropout from treatment,12,ratio,100.0,Robust,10,2016.0,83.3,16.67,4,8,22.0,Yes,No
 CD013462,Rate of postoperative pancreatic fistula (grade B or C defined according to the 2005 ISGPF definition),17,ratio,0.0,Unstable,,,,12.5,2,,14.0,No,No
 CD013474,Treatment discontinuation,6,ratio,0.0,Unstable,,,,0.0,0,,3.0,No,No
+CD013524,N° of participants with at least one serious adverse event at the end of follow-up,8,ratio,0.0,Unstable,,,,0.0,0,,8.0,No,No
 CD013539,Antidrug antibodies,29,ratio,0.0,Unstable,,,,0.0,0,,4.0,No,No
 CD013541,Leaving the study early (> 12 months postintervention),8,ratio,0.0,Unstable,,,,0.0,0,,9.0,No,No
 CD013561,Adverse events,5,ratio,0.0,Unstable,,,,12.5,0,,4.0,No,No
 CD013590,SCD-related complications (number of participants),5,ratio,0.0,Unstable,,,,25.0,1,,0.0,No,No
 CD013591,Physical activity (other measures),13,difference,50.0,Fragile,,,,5.0,1,,9.0,No,No
 CD013614,Clinical improvement as measured by ACR20 response criteria or by the EULAR moderate response criteria or by PsARC criteria at 12 weeks,15,ratio,100.0,Robust,3,2005.0,20.0,0.0,0,,18.0,Yes,Yes
+CD013616,Patient safety events,27,ratio,0.0,Unstable,,,,0.0,0,,27.0,No,No
+CD013617,Cardiorespiratory fitness,37,difference,100.0,Robust,25,2020.0,67.6,8.09,8,10,11.0,Yes,No
 CD013643,"Number of minor adverse events (Clavien-Dindo I, II), short term (< 1 year) ",6,ratio,100.0,Robust,5,2023.0,83.3,25.0,3,5,39996.0,Yes,Yes
+CD013661,Adverse events: all,9,ratio,0.0,Unstable,,,,16.67,2,,16.0,No,No
 CD013672,Treatment retention,7,ratio,0.0,Unstable,,,,18.75,0,,18.0,No,No
 CD013715,Sensitivity analysis: pedACR70 at the latest time point,7,ratio,100.0,Robust,6,2015.0,85.7,37.5,3,4,14.0,Yes,No
 CD013726,Adverse events,12,ratio,0.0,Unstable,,,,2.78,0,,13.0,No,No
 CD013748,Poor functional outcome,8,ratio,50.0,Fragile,,,,10.0,1,,11.0,No,No
 CD013757,Hospitalisation due to RSV infection,6,ratio,75.0,Moderate,3,2003.0,50.0,8.33,1,,20.0,Yes,Yes
-CD013763,Rates of opioid-related adverse events (PONV),21,ratio,100.0,Robust,8,2020.0,38.1,8.33,4,8,3.0,Yes,No
+CD013763,Rates of opioid-related adverse events (PONV),21,ratio,100.0,Robust,9,2020.0,42.9,5.56,2,9,3.0,Yes,No
 CD013773,Incidence of myopia,7,ratio,100.0,Robust,5,2018.0,71.4,12.5,1,5,6.0,Yes,Yes
 CD013781,All-cause mortality,14,ratio,100.0,Robust,8,2014.0,57.1,9.09,2,8,11.0,Yes,No
 CD013789,"Scar thickness (ultrasound, PGT vs other scar management therapy)",38,difference,0.0,Unstable,,,,1.43,0,,16.0,No,No
@@ -212,9 +243,12 @@ CD013875,Clinical pregnancy – all studies,9,ratio,100.0,Robust,5,2021.0,55.6,1
 CD014040,Fertilization rate ,14,ratio,100.0,Robust,4,2013.0,28.6,6.82,4,4,11.0,Yes,Yes
 CD014089,Adverse effects,6,ratio,50.0,Fragile,,,,50.0,3,,7.0,No,No
 CD014145,Failed apnea reduction after 2 to 7 days,6,ratio,0.0,Unstable,,,,0.0,0,,10.0,No,No
+CD014217,&nbsp;Outcome 1: Parasite clearance on day 3,9,ratio,100.0,Robust,4,2005.0,44.4,8.33,1,4,1.0,Yes,Yes
 CD014300,Acceptability at study endpoint: children,9,ratio,12.5,Unstable,,,,14.58,2,,6.0,No,No
+CD014353,All‐cause mortality up to hospital discharge and the first year of life,9,ratio,0.0,Unstable,,,,0.0,0,,6.0,No,No
 CD014428,Pain intensity,6,difference,100.0,Robust,4,2020.0,66.7,25.0,2,4,7.0,Yes,Yes
 CD014541,Major bleeding: short-term (45 days or fewer),5,ratio,100.0,Robust,3,2013.0,60.0,0.0,0,,5.0,Yes,Yes
+CD014544,Adverse events,12,ratio,0.0,Unstable,,,,0.0,0,,0.0,No,No
 CD014544,Adverse events,12,ratio,0.0,Unstable,,,,0.0,0,,0.0,No,No
 CD014585,Adverse events,12,ratio,25.0,Unstable,,,,2.78,0,,14.0,No,No
 CD014594,First-pass success,7,ratio,100.0,Robust,3,2018.0,42.9,6.25,1,,4.0,Yes,Yes
@@ -229,7 +263,9 @@ CD014762,Adverse events (to day 30 after randomisation),7,ratio,0.0,Unstable,,,,
 CD014763,Surgical site infection,9,ratio,100.0,Robust,4,2014.0,44.4,8.33,1,4,8.0,Yes,Yes
 CD014769,Any VTE,27,ratio,100.0,Robust,25,2016.0,92.6,8.33,4,25,21.0,Yes,No
 CD014792,Major complications,11,ratio,0.0,Unstable,,,,0.0,0,,14.0,No,No
+CD014794,Change in height (cm) NRSIs,7,difference,25.0,Unstable,,,,18.75,2,,45.0,No,No
 CD014803,Attrition (dropouts),5,ratio,0.0,Unstable,,,,0.0,0,,1.0,No,No
+CD014808,"Comparison 1: Colchicine vs comparison, Outcome 1: All-cause mortality",10,ratio,0.0,Unstable,,,,0.0,0,,11.0,No,No
 CD014820,Acute kidney injury,17,ratio,0.0,Unstable,,,,0.0,0,,14.0,No,No
 CD014833,Breastfeeding exclusivity short-term 1 to 3 months post-intervention,5,ratio,25.0,Unstable,,,,12.5,0,,7.0,No,No
 CD014844,Uterine infection,6,ratio,0.0,Unstable,,,,0.0,0,,26.0,No,No
@@ -243,43 +279,59 @@ CD014914,Adverse events (treatment): primary analysis,16,ratio,100.0,Robust,4,19
 CD014932,Improvement in quality-of-life measures: family impact,7,difference,25.0,Unstable,,,,12.5,0,,11.0,No,No
 CD014937,Subgroup analysis: acute kidney injury by population,66,ratio,100.0,Robust,3,1987.0,4.5,0.0,0,,37.0,Yes,Yes
 CD014959,Proportion of people with laboratory-confirmed leptospirosis regardless of the presence of an identified clinical syndrome (inclusive of asymptomatic cases) ,5,ratio,0.0,Unstable,,,,0.0,0,,18.0,No,No
-CD014964,First-attempt success (Types of ultrasound guidance: preprocedural versus real‐time),54,ratio,100.0,Robust,11,,20.4,3.68,4,11,0,Yes,No
+CD014964,First-attempt success (Types of ultrasound guidance: preprocedural versus real‐time),54,ratio,100.0,Robust,3,,5.6,0.25,1,,0,Yes,Yes
 CD014965,Other side effects: sedation,8,ratio,100.0,Robust,4,2009.0,50.0,10.0,1,4,8.0,Yes,Yes
 CD014966,Death,28,ratio,25.0,Unstable,,,,9.0,4,,13.0,No,No
 CD014967,Mortality before hospital discharge,5,ratio,0.0,Unstable,,,,0.0,0,,3.0,No,No
 CD015003,Adverse events,10,ratio,37.5,Unstable,,,,19.64,1,,30.0,No,No
 CD015014,Mortality (proportion of residents who died),24,ratio,0.0,Unstable,,,,0.0,0,,17.0,No,No
+CD015022,Surgical site infection (SSI) rate,9,ratio,100.0,Robust,6,2018.0,66.7,16.67,3,6,3.0,Yes,No
 CD015038,Wound infection,9,ratio,100.0,Robust,6,2019.0,66.7,14.58,3,6,6.0,Yes,No
 CD015040,Stimulation frequency: low versus high frequency,7,difference,0.0,Unstable,,,,37.5,4,6,2.0,No,No
 CD015042,Number of women who completed treatment,7,ratio,0.0,Unstable,,,,0.0,0,,7.0,No,No
+CD015063,Bronchopulmonary dysplasia at 36 weeks' postmenstrual age (requiring oxygen or respiratory support at 36 weeks' postmenstrual age),6,ratio,0.0,Unstable,,,,0.0,0,,13.0,No,No
+CD015072,Pathological complete response,10,ratio,100.0,Robust,4,,40.0,7.14,1,4,0,Yes,Yes
 CD015083,Back-related function,67,difference,100.0,Robust,12,2004.0,17.9,2.34,2,12,27.0,Yes,No
 CD015087,Nausea and/or vomiting,7,ratio,25.0,Unstable,,,,31.25,2,,0,No,No
+CD015092,Adverse events: Serious adverse events - medium term,15,ratio,0.0,Unstable,,,,1.04,0,,3.0,No,No
 CD015120,Smoking cessation,5,ratio,0.0,Unstable,,,,0.0,0,,7.0,No,No
 CD015122,Blood transfusion,9,ratio,100.0,Robust,8,2021.0,88.9,8.33,1,8,4.0,Yes,No
 CD015124,Assessment of prognostic factors around breast cancer diagnosis,8,ratio,100.0,Robust,4,2012.0,50.0,10.0,1,4,12.0,Yes,Yes
 CD015134,Preterm birth,6,ratio,25.0,Unstable,,,,8.33,0,,1.0,No,No
 CD015140,Risk of relapse in drug-off time - fixed-effect model,5,ratio,0.0,Unstable,,,,0.0,0,,10.0,No,No
+CD015151,Death (any cause): subgroup analysis by type of dialysis,26,ratio,100.0,Robust,12,2018.0,46.2,6.52,7,5,13.0,Yes,No
+CD015173,Proportion of people with serious adverse events (maximum follow-up between 1 month and 75 months),9,ratio,25.0,Unstable,,,,2.08,0,,10.0,No,No
 CD015192,Surgical site infection rate,6,ratio,0.0,Unstable,,,,0.0,0,,6.0,No,No
 CD015213,Recurrence rate,12,ratio,100.0,Robust,6,2010.0,50.0,11.11,2,6,15.0,Yes,No
 CD015219,All adverse events,18,ratio,100.0,Robust,9,2021.0,50.0,13.33,4,9,3.0,Yes,No
 CD015229,Opiate consumption at 3 months,9,difference,100.0,Robust,4,2008.0,44.4,8.33,1,4,17.0,Yes,Yes
+CD015234,Caesarean section due to any causes,109,ratio,0.0,Unstable,,,,0.24,0,,30.0,No,No
 CD015252,Presence or persistence of OME,7,ratio,100.0,Robust,6,,85.7,12.5,1,6,0,Yes,No
 CD015254,Sensitivity analysis: persistence (short-term) including cases of acute otitis (Mandel 1987),10,ratio,75.0,Moderate,9,1997.0,90.0,14.29,2,9,8.0,Yes,No
 CD015255,Persistence of OME (very short-term - up to 6 weeks),7,ratio,37.5,Unstable,,,,34.38,4,6,34.0,No,No
+CD015266,Serious extracranial hemorrhage,8,ratio,100.0,Robust,3,,37.5,5.0,1,,0,Yes,Yes
 CD015284,Seizure freedom,5,ratio,62.5,Fragile,,,,43.75,2,4,3.0,No,No
 CD015314,Tobacco cessation at longest follow-up,21,ratio,100.0,Robust,5,2002.0,23.8,4.17,3,5,25.0,Yes,Yes
 CD015326,zBMI (Medium Term),16,difference,100.0,Robust,7,2016.0,43.8,11.54,5,4,10.0,Yes,No
 CD015328,BMI short-term,27,difference,50.0,Fragile,,,,3.12,1,,19.0,No,No
 CD015330,BMI short term,11,difference,0.0,Unstable,,,,0.0,0,,9.0,No,No
-CD015331,Leaving the study early - for any reason - overall acceptability (separated time points),48,ratio,100.0,Robust,33,2019.0,68.8,7.78,8,13,20.0,Yes,No
+CD015331,Leaving the study early - for any reason - overall acceptability (separated time points),48,ratio,100.0,Robust,33,2019.0,68.8,8.89,6,17,20.0,Yes,No
 CD015332,Leaving the study early – for any reason – overall acceptability (separated time points),5,ratio,0.0,Unstable,,,,0.0,0,,0.0,No,No
+CD015338,Activity: FES vs practice of same activity post-intervention,35,difference,100.0,Robust,6,2007.0,17.1,4.69,4,6,20.0,Yes,No
 CD015350,Proportion with non-serious or non-severe harms/adverse events,9,ratio,0.0,Unstable,,,,0.0,0,,19.0,No,No
+CD015363,Anogenital warts (cohort studies; medium/long-term),33,ratio,100.0,Robust,3,2013.0,9.1,0.83,2,,11.0,Yes,Yes
+CD015364,Serious adverse events,37,ratio,0.0,Unstable,,,,2.21,0,,0,No,No
+CD015371,Daily functioning - post-intervention,11,difference,100.0,Robust,10,2024.0,90.9,15.62,4,7,8.0,Yes,No
 CD015373,Tolerability,5,ratio,0.0,Unstable,,,,0.0,0,,16.0,No,No
+CD015376,Initial management versus control: short-term follow-up. Outcome: cure,15,ratio,100.0,Robust,5,2007.0,33.3,4.17,1,5,19.0,Yes,Yes
+CD015381,Serious Adverse Events,5,ratio,0.0,Unstable,,,,0.0,0,,1.0,No,No
 CD015383,Anxiety on STAI-T (scale 20 to 80),5,difference,100.0,Robust,4,2016.0,80.0,25.0,1,4,6.0,Yes,Yes
 CD015387,All-cause mortality at the end of scheduled follow-up,21,ratio,100.0,Robust,8,2004.0,38.1,4.86,2,8,26.0,Yes,No
 CD015432,Number of children who required rescue medication 2 hours to less than 24 hours postintervention,8,ratio,0.0,Unstable,,,,0.0,0,,22.0,No,No
+CD015436,Disc haemorrhage,6,ratio,100.0,Robust,4,2020.0,66.7,16.67,1,4,14.0,Yes,Yes
 CD015443,Discontinuations due to adverse events,19,ratio,100.0,Robust,3,2001.0,15.8,0.0,0,,19.0,Yes,Yes
 CD015448,Mean change from baseline in symptom scores at 4 weeks,7,difference,0.0,Unstable,,,,25.0,2,,0.0,No,No
+CD015470,Recurrence,6,ratio,0.0,Unstable,,,,0.0,0,,5.0,No,No
 CD015476,Adenoma detection rate,15,ratio,100.0,Robust,8,2021.0,53.3,12.5,4,6,3.0,Yes,No
 CD015518,Cancer-related fatigue ≤ 12 weeks,12,difference,100.0,Robust,6,2015.0,50.0,11.11,2,6,11.0,Yes,No
 CD015520,CRF ≤ 12 weeks,5,difference,100.0,Robust,5,2021.0,100.0,50.0,2,5,5.0,Yes,Yes
@@ -287,9 +339,11 @@ CD015532,Overall mortality and in-hospital mortality,11,ratio,0.0,Unstable,,,,0.
 CD015536,Proportion of people with serious adverse events,10,ratio,0.0,Unstable,,,,0.0,0,,13.0,No,No
 CD015584,Placement success,13,ratio,0.0,Unstable,,,,0.0,0,,11.0,No,No
 CD015588,All-cause death,16,ratio,100.0,Robust,4,2014.0,25.0,3.85,2,4,9.0,Yes,Yes
+CD015610,Weight loss (categorical),8,ratio,0.0,Unstable,,,,0.0,0,,3.0,No,No
 CD015636,Subgroup investigations – dengue virus (DENV) serotype,5,ratio,100.0,Robust,3,2021.0,60.0,0.0,0,,0.0,Yes,Yes
 CD015673,Dropouts,14,ratio,0.0,Unstable,,,,27.27,5,11,13.0,No,No
 CD015721,Functional independence: mRS score < 3 within 90 days,6,ratio,0.0,Unstable,,,,0.0,0,,1.0,No,No
+CD015723,Corneal re-epithelialization at 1 to 3 months post-intervention&nbsp;,6,ratio,87.5,Moderate,6,2022.0,100.0,25.0,2,6,4.0,Yes,No
 CD015746,Acute typhoid fever,6,ratio,100.0,Robust,4,2021.0,66.7,12.5,1,4,7.0,Yes,Yes
 CD015779,Recurrence of rheumatic fever,6,ratio,100.0,Robust,6,1973.0,100.0,33.33,2,6,21.0,Yes,No
 CD015786,Early adverse effects,10,ratio,100.0,Robust,8,2017.0,80.0,14.29,2,8,0.0,Yes,No
@@ -298,8 +352,12 @@ CD015804,Proportion of participants who experienced TEAEs during the study perio
 CD015824,Clinical worsening,5,ratio,100.0,Robust,4,2015.0,80.0,25.0,1,4,3.0,Yes,Yes
 CD015849,All-cause death,7,ratio,75.0,Moderate,7,2024.0,100.0,18.75,2,7,7.0,Yes,No
 CD015854,Serious adverse event,5,ratio,0.0,Unstable,,,,0.0,0,,0.0,No,No
+CD015859,"Upper extremity (UE) motor function, composite score, comparison between changes from baseline (short-term) with possible outlier",11,difference,100.0,Robust,10,2025.0,90.9,25.0,6,5,5.0,Yes,No
 CD015894,Pain assessed with a validated scale for procedural pain in newborns during the procedure,7,difference,100.0,Robust,6,2021.0,85.7,25.0,2,6,6.0,Yes,No
+CD015906,Hypoglycaemia,13,ratio,0.0,Unstable,,,,0.0,0,,9.0,No,No
 CD015932,Rate of pulmonary complications – pneumonia (with RCT),10,ratio,100.0,Robust,7,2018.0,70.0,17.86,4,7,27.0,Yes,No
+CD016017,Adverse events: serious adverse events - medium term,19,ratio,0.0,Unstable,,,,18.75,6,,9.0,No,No
+CD016018,Adverse events: Serious adverse events - medium term,9,ratio,0.0,Unstable,,,,0.0,0,,1.0,No,No
 CD016031,"Comparison 3: Lateral vs posterior, Outcome 15: Adverse events, implant related (categorical data)",28,ratio,0.0,Unstable,,,,0.0,0,,43.0,No,No
 CD016064,Adverse events,5,ratio,0.0,Unstable,,,,0.0,0,,24.0,No,No
 CD016119,Requirement for blood transfusion,16,ratio,75.0,Moderate,16,,100.0,5.77,2,16,17.0,Yes,No
