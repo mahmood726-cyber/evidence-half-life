@@ -3,7 +3,7 @@
   "slug": "evidence-half-life",
   "author": "Mahmood Ahmad",
   "date": "2026-03-26",
-  "path": "C:\\EvidenceHalfLife",
+  "path": "..",
   "type": "methods",
   "primary_estimand": "Never-stabilized rate",
   "summary": "More than half of Cochrane meta-analyses never reach conclusions that are robust across analytical specifications.",
