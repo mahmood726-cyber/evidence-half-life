@@ -231,7 +231,7 @@ Distribution of the number of classification flips (changes in majority directio
 
 ## REFERENCES
 
-1. Higgins JPT, Thomas J, Chandler J, et al., eds. *Cochrane Handbook for Systematic Reviews of Interventions*. Version 6.4. Cochrane, 2023. Available from www.training.cochrane.org/handbook.
+1. Higgins JPT, Thomas J, Chandler J, et al., eds. *Cochrane Handbook for Systematic Reviews of Interventions*. Version 6.4. Cochrane, 2023. Available from www.training.cochrane.org/handbook. doi:10.1002/9781119536604
 
 2. Lau J, Antman EM, Jimenez-Silva J, Kupelnick B, Mosteller F, Chalmers TC. Cumulative meta-analysis of therapeutic trials for myocardial infarction. *N Engl J Med* 1992;327:248-54.
 
@@ -239,9 +239,9 @@ Distribution of the number of classification flips (changes in majority directio
 
 4. Steegen S, Tuerlinckx F, Gelman A, Vanpaemel W. Increasing transparency through a multiverse analysis. *Perspect Psychol Sci* 2016;11:702-12.
 
-5. Riley RD, Higgins JPT, Deeks JJ. Interpretation of random effects meta-analyses. *BMJ* 2011;342:d549.
+5. Riley RD, Higgins JPT, Deeks JJ. Interpretation of random effects meta-analyses. *BMJ* 2011;342:d549. doi:10.1136/bmj.d549
 
-6. Veroniki AA, Jackson D, Viechtbauer W, et al. Methods to estimate the between-study variance and its uncertainty in meta-analysis. *Res Synth Methods* 2016;7:55-79.
+6. Veroniki AA, Jackson D, Viechtbauer W, et al. Methods to estimate the between-study variance and its uncertainty in meta-analysis. *Res Synth Methods* 2016;7:55-79. doi:10.1002/jrsm.1164
 
 7. Hartung J, Knapp G. A refined method for the meta-analysis of controlled clinical trials with binary outcome. *Stat Med* 2001;20:3875-89.
 
@@ -251,11 +251,11 @@ Distribution of the number of classification flips (changes in majority directio
 
 10. Viechtbauer W. Conducting meta-analyses in R with the metafor package. *J Stat Softw* 2010;36:1-48.
 
-11. IntHout J, Ioannidis JPA, Borm GF. The Hartung-Knapp-Sidik-Jonkman method for random effects meta-analysis is straightforward and considerably outperforms the standard DerSimonian-Laird method. *BMC Med Res Methodol* 2014;14:25.
+11. IntHout J, Ioannidis JPA, Borm GF. The Hartung-Knapp-Sidik-Jonkman method for random effects meta-analysis is straightforward and considerably outperforms the standard DerSimonian-Laird method. *BMC Med Res Methodol* 2014;14:25. doi:10.1186/1471-2288-14-25
 
 12. Paule RC, Mandel J. Consensus values and weighting factors. *J Res Natl Bur Stand* 1982;87:377-85.
 
-13. Elliott JH, Synnot A, Turner T, et al. Living systematic review: 1. Introduction --- the why, what, when, and how. *J Clin Epidemiol* 2017;91:23-30.
+13. Elliott JH, Synnot A, Turner T, et al. Living systematic review: 1. Introduction --- the why, what, when, and how. *J Clin Epidemiol* 2017;91:23-30. doi:10.1016/j.jclinepi.2017.08.010
 
 14. Sutton AJ, Cooper NJ, Jones DR, Lambert PC, Thompson JR, Abrams KR. Evidence-based sample size calculations based upon updated meta-analysis. *Stat Med* 2007;26:2479-500.
 
