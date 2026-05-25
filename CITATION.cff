@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "The Evidence Half-Life: 52% of Meta-Analyses Never Reach Analytical Stability"
+version: "1.0.0"
+date-released: "2026-04-07"
+authors:
+  - family-names: Ahmad
+    given-names: Mahmood
+    orcid: "https://orcid.org/0000-0001-9107-3704"
+    affiliation: "Tahir Heart Institute"
+repository-code: "https://github.com/mahmood726-cyber/EvidenceHalfLife"
+url: "https://github.com/mahmood726-cyber/EvidenceHalfLife"
+license: MIT
+keywords:
+  - meta-analysis
+  - evidence-synthesis
+  - E156
